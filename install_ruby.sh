@@ -96,3 +96,6 @@ case $RUBY_VERSION in
 esac
 
 rm -fr /usr/src/ruby /root/.gem/
+
+# rough smoke test
+(cd && ruby --version && gem --version && bundle --version)
