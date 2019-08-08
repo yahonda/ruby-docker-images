@@ -83,4 +83,4 @@ gem update --system "$RUBYGEMS_VERSION"
 rm -fr /usr/src/ruby /root/.gem/
 
 # rough smoke test
-ruby --version && gem --version && bundle --version
+(cd && ruby --version && gem --version && bundle --version)
