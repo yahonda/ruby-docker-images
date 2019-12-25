@@ -2,9 +2,9 @@
 
 set -ex
 
-RUBY_VERSION=${RUBY_VERSION-2.6.0}
+RUBY_VERSION=${RUBY_VERSION-2.7.0}
 RUBY_MAJOR=$(echo $RUBY_VERSION | sed -E 's/\.[0-9]+(-.*)?$//g')
-RUBYGEMS_VERSION=${RUBYGEMS_VERSION-3.0.3}
+RUBYGEMS_VERSION=${RUBYGEMS_VERSION-3.1.2}
 
 function get_released_ruby() {
   rm -rf /tmp/www
