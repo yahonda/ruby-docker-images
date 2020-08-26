@@ -8,7 +8,7 @@ RUBYGEMS_VERSION=${RUBYGEMS_VERSION-3.0.3}
 
 function get_released_ruby() {
   rm -rf /tmp/www
-  git clone --depth 1 https://github.com/ruby/www.ruby-lang.org.git /tmp/www
+  git clone https://github.com/ruby/www.ruby-lang.org.git /tmp/www
 
   cat << RUBY | ruby - $1 /tmp/www/_data/releases.yml
 require "psych"
@@ -48,7 +48,7 @@ if test -n "$RUBY_MASTER_COMMIT"; then
     git pull --rebase origin
   else
     rm -r /usr/src/ruby
-    git clone --depth 1 https://github.com/ruby/ruby.git /usr/src/ruby
+    git clone https://github.com/ruby/ruby.git /usr/src/ruby
     cd /usr/src/ruby
   fi
   git checkout $RUBY_MASTER_COMMIT
